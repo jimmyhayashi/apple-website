@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
+import React, { useEffect } from "react";
 
 //...
 import * as Sentry from "@sentry/react";
@@ -10,7 +11,7 @@ Sentry.init({
   dsn: "https://4a65e1f2cd0f520a08b60f4812b3ed21@o4507785589424128.ingest.de.sentry.io/4507785591521360",
   integrations: [
     Sentry.browserTracingIntegration(),
-    Sentry.metrics.metricsAggregatorIntregation(),
+    //Sentry.metrics.metricsAggregatorIntegration(),
     Sentry.reactRouterV6BrowserTracingIntegration({
       useEffect: React.useEffect,
     }),
